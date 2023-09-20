@@ -1,5 +1,5 @@
 import { Greet } from './components/Greet.component';
-import { Person } from './components/Person.component';
+import { Person } from './components/Person/Person.component';
 import { PersonList } from './components/PersonList.component';
 import { Status } from './components/Status';
 import { Heading } from './components/Heading.component';

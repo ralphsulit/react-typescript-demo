@@ -1,11 +1,6 @@
 import { Fragment } from "react";
 
-type PersonProps = {
-  name: {
-    firstName: string
-    lastName: string
-  }
-}
+import { PersonProps } from './Person.types';
 
 export const Person = (props: PersonProps) => {
   const { firstName, lastName } = props.name;
