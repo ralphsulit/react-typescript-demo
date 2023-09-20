@@ -4,7 +4,8 @@ import { PersonList } from './components/PersonList.component';
 import { Status } from './components/Status';
 import { Heading } from './components/Heading.component';
 import { Oscar } from './components/Oscar.component';
-import { Button } from './components/Button.component'
+import { Button } from './components/Button.component';
+import { Input } from './components/Input.component';
 
 import './App.css';
 
@@ -42,6 +43,7 @@ function App() {
       <Button handleClick={(event, id) => {
         console.log('Button Clicked!', event, id)
       }} />
+      <Input value='' handleChange={event => console.log(event)} />
     </div>
   );
 }
