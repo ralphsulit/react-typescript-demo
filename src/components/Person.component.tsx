@@ -8,9 +8,11 @@ type PersonProps = {
 }
 
 export const Person = (props: PersonProps) => {
+  const { firstName, lastName } = props.name;
+
   return (
     <Fragment>
-      {props.name.firstName} {props.name.lastName}
+      {firstName} {lastName}
     </Fragment>
   )
 };
