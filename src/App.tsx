@@ -4,6 +4,7 @@ import { PersonList } from './components/PersonList.component';
 import { Status } from './components/Status';
 import { Heading } from './components/Heading.component';
 import { Oscar } from './components/Oscar.component';
+import { Button } from './components/Button.component'
 
 import './App.css';
 
@@ -38,6 +39,9 @@ function App() {
       <Oscar>
         <Heading>Oscar goes to Johnny Depp</Heading>
       </Oscar>
+      <Button handleClick={(event, id) => {
+        console.log('Button Clicked!', event, id)
+      }} />
     </div>
   );
 }
