@@ -1,5 +1,6 @@
 import { Greet } from './components/Greet.component';
 import { Person } from './components/Person.component';
+import { PersonList } from './components/PersonList.component';
 
 import './App.css';
 
@@ -9,10 +10,26 @@ function App() {
     lastName: 'Wayne'
   }
 
+  const nameList = [
+    {
+      firstName: 'Bruce',
+      lastName: 'Wayne'
+    },
+    {
+      firstName: 'Clark',
+      lastName: 'Kent'
+    },
+    {
+      firstName: 'Princess',
+      lastName: 'Diana'
+    }
+  ]
+
   return (
     <div className="App">
       <Greet name='Bruce' messageCount={20} isLoggedIn={true} />
       <Person name={personName} />
+      <PersonList names={nameList} />
     </div>
   );
 }
