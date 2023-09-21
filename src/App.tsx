@@ -27,6 +27,8 @@ import { AuthProfile } from './components/auth/AuthProfile';
 
 import { List } from './components/generics/List';
 
+import { RandomNumber } from './components/restriction/RandomNumber';
+
 import './App.css';
 
 function App() {
@@ -112,6 +114,8 @@ function App() {
         ]}
         onClick={(item) => console.log(item)}
       />
+
+      <RandomNumber value={10} isPositive />
     </div>
   );
 }
