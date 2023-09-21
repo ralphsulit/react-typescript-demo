@@ -7,6 +7,7 @@ import { Oscar } from './components/Oscar.component';
 import { Button } from './components/Button.component';
 import { Input } from './components/Input.component';
 import { Container } from './components/Container.component';
+import { User } from './components/states/User';
 
 import './App.css';
 
@@ -45,7 +46,9 @@ function App() {
         console.log('Button Clicked!', event, id)
       }} />
       <Input value='' handleChange={event => console.log(event)} />
-      <Container styles={{border: '1px solid black', padding: '1rem'}} />
+      <Container styles={{ border: '1px solid black', padding: '1rem' }} />
+      
+      <User />
     </div>
   );
 }

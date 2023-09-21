@@ -6,18 +6,39 @@ type AuthUser = {
 }
 
 export const User = () => {
-  const [user, setUser] = useState<AuthUser>({} as AuthUser);
+  const [user, setUser] = useState<AuthUser | null>(null);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+
   const handleLogin = () => {
     setUser({
       name: 'John',
-      email: 'JohnDoe@example.com', 
-    })
+      email: 'JohnDoe@example.com',
+    });
+    setIsLoggedIn(true);
   }
+  
+  const handleLogout = () => {
+    setUser(null);
+    setIsLoggedIn(false);
+  }
+
   return (
     <>
-      <button onClick={handleLogin}>Login</button>
-      <div>User name is {user?.name}</div>
-      <div>User email is {user?.email}</div>
+      {isLoggedIn ? (
+        <>
+          <button onClick={handleLogout}>Logout</button>
+          <div>User name is {user?.name}</div>
+          <div>User email is {user?.email}</div>
+        </>
+      ) : (
+          <>
+            <button onClick={handleLogin}>Login</button>
+            <div>User name is {user?.name}</div>
+            <div>User email is {user?.email}</div>
+          </>
+      )
+
+      }
     </>
   )
 }
