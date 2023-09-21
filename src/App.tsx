@@ -25,6 +25,8 @@ import { ClassCounter } from './components/class/ClassCounter';
 import { AuthPrivate } from './components/auth/AuthPrivate';
 import { AuthProfile } from './components/auth/AuthProfile';
 
+import { List } from './components/generics/List';
+
 import './App.css';
 
 function App() {
@@ -81,6 +83,35 @@ function App() {
       <ClassCounter message='The count value is ' />
 
       <AuthPrivate isLoggedIn={true} component={AuthProfile} />
+
+      {/* <List
+        items={['Batman', 'Superman', 'Flash']}
+        onClick={(item) => console.log(item)}
+      />
+      <List
+        items={[1, 2, 3]}
+        onClick={(item) => console.log(item)}
+      /> */}
+      <List
+        items={[
+          {
+            id: 1,
+            first: 'Bruce',
+            last: 'Wayne'
+          },
+          {
+            id: 2,
+            first: 'Clark',
+            last: 'Kent'
+          },
+          {
+            id: 3,
+            first: 'Princess',
+            last: 'Dianna'
+          }
+        ]}
+        onClick={(item) => console.log(item)}
+      />
     </div>
   );
 }
