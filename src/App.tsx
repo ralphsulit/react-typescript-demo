@@ -14,6 +14,9 @@ import { Counter } from './components/states/Counter';
 import { ThemeContextProvider } from './components/context/ThemeContext';
 import { Box } from './components/context/Box';
 
+import { UserContextProvider } from './components/context/UserContext';
+import { UserCont } from './components/context/UserCont';
+
 import './App.css';
 
 function App() {
@@ -59,6 +62,10 @@ function App() {
       <ThemeContextProvider>
         <Box />
       </ThemeContextProvider>
+
+      <UserContextProvider>
+        <UserCont />
+      </UserContextProvider>
     </div>
   );
 }
