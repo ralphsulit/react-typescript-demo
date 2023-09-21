@@ -7,7 +7,9 @@ import { Oscar } from './components/Oscar.component';
 import { Button } from './components/Button.component';
 import { Input } from './components/Input.component';
 import { Container } from './components/Container.component';
+
 import { User } from './components/states/User';
+import { Counter } from './components/states/Counter';
 
 import './App.css';
 
@@ -49,6 +51,7 @@ function App() {
       <Container styles={{ border: '1px solid black', padding: '1rem' }} />
       
       <User />
+      <Counter />
     </div>
   );
 }
