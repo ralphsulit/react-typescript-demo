@@ -20,6 +20,8 @@ import { UserCont } from './components/context/UserCont';
 import { DomRef } from './components/ref/DomRef'; 
 import { MutableRef } from './components/ref/MutableRef';
 
+import { ClassCounter } from './components/class/ClassCounter';
+
 import './App.css';
 
 function App() {
@@ -72,6 +74,8 @@ function App() {
 
       <DomRef />
       <MutableRef />
+
+      <ClassCounter message='The count value is ' />
     </div>
   );
 }
