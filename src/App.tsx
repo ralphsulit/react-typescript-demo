@@ -22,6 +22,9 @@ import { MutableRef } from './components/ref/MutableRef';
 
 import { ClassCounter } from './components/class/ClassCounter';
 
+import { AuthPrivate } from './components/auth/AuthPrivate';
+import { AuthProfile } from './components/auth/AuthProfile';
+
 import './App.css';
 
 function App() {
@@ -76,6 +79,8 @@ function App() {
       <MutableRef />
 
       <ClassCounter message='The count value is ' />
+
+      <AuthPrivate isLoggedIn={true} component={AuthProfile} />
     </div>
   );
 }
